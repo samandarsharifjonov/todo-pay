@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paynowuz/export.dart';
 
-
 class SendUploadImageWidget extends StatelessWidget {
   const SendUploadImageWidget({super.key});
 
@@ -19,15 +18,20 @@ class SendUploadImageWidget extends StatelessWidget {
               width: 100.o,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
-                color: darkMode.isDarkMode ? theme.disabledColor : Color.fromRGBO(243, 244, 245, 1),
+                color: darkMode.isDarkMode
+                    ? theme.disabledColor
+                    : Color.fromRGBO(243, 244, 245, 1),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: imageProvider.image == null
-                  ? Icon(Icons.person, size: 25.o,)
+                  ? Icon(
+                      Icons.person,
+                      size: 25.o,
+                    )
                   : Image.file(
-                  File(imageProvider.image ?? ""),
-                  fit: BoxFit.fill,
-                                      ),
+                      File(imageProvider.image ?? ""),
+                      fit: BoxFit.fill,
+                    ),
             ),
             SizedBox(
               height: 5.h,
